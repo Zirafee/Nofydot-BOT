@@ -1,0 +1,22 @@
+{
+  "name": "nofydotscript",
+  "version": "rb1.0.1",
+  "description": "Nofydot est le frère de VRG BOT",
+  "main": "NofydotScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github/Zirafee/Nofydot-BOT"
+  },
+  "keywords": [
+    "Nofydot",
+    "VRG"
+  ],
+  "author": "ZirafeeCodes",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}

@@ -4,14 +4,8 @@ const bot = new Discord.Client();
 var prefix = ("--")
 var prefix2 = ("?")
 
-client.on("ready", () =>{
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setPresence({
-        status: "online",
-        game: {
-            name: "Coup de main --aide",
-        }
-    });
+bot.on('ready', function() {
+    bot.user.setActivity("pour de l'aide: *Help");
 });
 
 bot.login(process.env.TOKEN);

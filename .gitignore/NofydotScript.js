@@ -1,16 +1,22 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
 var prefix = ("--")
 var prefix2 = ("?")
 
-bot.on('ready', function() {
-    bot.user.setActivity("coup de main --aide");
+client.on("ready", () =>{
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setPresence({
+        status: "online",
+        game: {
+            name: "Coup de main --aide",
+        }
+    });
 });
 
-bot.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if (message.content === prefix + "infoserveur"){
         var embed = new Discord.RichEmbed()
@@ -331,12 +337,12 @@ bot.on('message', message => {
 
 }); // fermeture de bot.on('message') sinon Nofy va pas aimer
 
-bot.on('guildMemberAdd', member => {
-    bot.channels.get('552882976736673794').send(`Bienvenue à toi **${member}** mais tu peux retirer tes chaussures stp ?`);
+client.on('guildMemberAdd', member => {
+    client.channels.get('552882976736673794').send(`Bienvenue à toi **${member}** mais tu peux retirer tes chaussures stp ?`);
 })
 
-bot.on('guildMemberRemove', member => {
-    bot.channels.get('552882976736673794').send(`Bah voilà **${member.user.username}** est parti, moi je l'aimais bien mais bon ...`);
+client.on('guildMemberRemove', member => {
+    client.channels.get('552882976736673794').send(`Bah voilà **${member.user.username}** est parti, moi je l'aimais bien mais bon ...`);
 })
 
 // version rb.1.0.1, le 14/11/2020 à 23h36 en appel avec SystemOfDragons via Discord (j'écris ça juste parce-que c'est classe)

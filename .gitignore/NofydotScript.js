@@ -5,7 +5,7 @@ var prefix = ("--")
 var prefix2 = ("?")
 
 bot.on('ready', function() {
-    bot.user.setActivity("pour de l'aide: *Help");
+    bot.user.setActivity("coup de main --aide");
 });
 
 bot.login(process.env.TOKEN);
@@ -136,7 +136,6 @@ bot.on('message', message => {
         .setTimestamp()
         .setTimeout(function(){ 
             message.channel.send("Le site est codé en HTML + CSS par un branleur de première classe \n ça va pas arriver de suite :)")
-        }, 5000);
     }
     // commande à mettre à jour quand le site sera opérationnel.
 

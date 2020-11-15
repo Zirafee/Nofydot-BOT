@@ -138,10 +138,7 @@ client.on('message', message => {
     }}
 
     if (message.content === prefix + "sitenofy"){
-        message.channel.send("Le site de Nofydot est en cours de développement.")
-        .setTimestamp()
-        .setTimeout(function(){ 
-            message.channel.send("Le site est codé en HTML + CSS par un branleur de première classe \n ça va pas arriver de suite :)")
+        message.channel.send("Le site de Nofydot est en cours de développement.\n Le site est codé en HTML + CSS par un branleur de première classe \n ça va pas arriver de suite :)")
     }
     // commande à mettre à jour quand le site sera opérationnel.
 

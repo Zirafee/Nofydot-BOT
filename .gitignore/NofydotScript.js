@@ -16,7 +16,7 @@ client.on("ready", () =>{
 
 client.login(process.env.TOKEN);
 
-client.on('message', message => {
+client.on("message", (message) => {
 
     if (message.content === prefix + "infoserveur"){
         var embed = new Discord.RichEmbed()
@@ -334,11 +334,11 @@ client.on('message', message => {
 
 }); // fermeture de bot.on('message') sinon Nofy va pas aimer
 
-client.on('guildMemberAdd', member => {
+client.on("guildMemberAdd", (member) => {
     client.channels.get('552882976736673794').send(`Bienvenue à toi **${member}** mais tu peux retirer tes chaussures stp ?`);
 })
 
-client.on('guildMemberRemove', member => {
+client.on("guildMemberRemove", (member) => {
     client.channels.get('552882976736673794').send(`Bah voilà **${member.user.username}** est parti, moi je l'aimais bien mais bon ...`);
 })
 
